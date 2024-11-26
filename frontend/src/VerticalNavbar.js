@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './VerticalNavbar.css';
 import { FaBars, FaUser, FaBrain, FaDatabase, FaFlask, FaSignOutAlt } from 'react-icons/fa';
+import { UserContext } from './UserContext'; // Import the UserContext
 
 function VerticalNavbar() {
   const [isExpanded, setIsExpanded] = useState(false);
   const navigate = useNavigate();
+  const { username } = useContext(UserContext); // Access the username from UserContext
 
   const handleToggle = () => {
     setIsExpanded(!isExpanded);
   };
 
   const handleLogout = () => {
-    navigate('/login'); // Redirect to login
+    navigate('/login');
   };
 
   const handleNavigation = (path) => {
@@ -27,7 +29,7 @@ function VerticalNavbar() {
       <div className="navbar-content">
         <div className="user-info">
           <FaUser className="icon" />
-          {isExpanded && <span className="user-name">John Doe</span>}
+          {isExpanded && <span className="user-name">{username || 'Guest'}</span>}
         </div>
         <ul className="nav-links">
           <li onClick={() => handleNavigation('/main-app')}>
