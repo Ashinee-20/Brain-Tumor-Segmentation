@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
+import { UserContext } from './UserContext'; // Import the UserContext
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const { setUsername: setGlobalUsername } = useContext(UserContext); // Access setUsername from UserContext
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -17,7 +19,7 @@ function Login({ onLogin }) {
     }
 
     try {
-      const response = await fetch('https://brain-tumor-segmentation-cfzs.onrender.com/login', {
+      const response = await fetch('http://localhost:5000/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -28,8 +30,9 @@ function Login({ onLogin }) {
       const data = await response.json();
 
       if (response.ok) {
-        onLogin(); // Trigger the parent component's onLogin function
-        navigate('/post-login'); // Navigate to the page with 3 buttons after login
+        setGlobalUsername(username); // Set the username in the context
+        onLogin();
+        navigate('/post-login');
       } else {
         setErrorMessage(data.message || 'Invalid credentials');
       }
