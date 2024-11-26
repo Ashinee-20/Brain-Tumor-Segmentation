@@ -22,7 +22,7 @@ function AppWrapper() {
  
   const NavbarWrapper = ({ children }) => {
     const location = useLocation(); 
-    const hideNavbar = location.pathname === '/login' || location.pathname === '/signup';
+    const hideNavbar = location.pathname === '/login' || location.pathname === '/signup' || location.pathname === '/';
 
     return (
       <div className="app-wrapper">
