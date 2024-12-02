@@ -1,11 +1,7 @@
-cachetools==5.5.0
-disutils==1.4.32.post2
 Flask==3.1.0
 Flask-Cors==5.0.0
-grpcio==1.68.0
 h5py==3.12.1
 keras==2.12.0
-kiwisolver==1.4.7
 matplotlib==3.9.2
 ml-dtypes==0.4.1
 numpy==1.23.5
