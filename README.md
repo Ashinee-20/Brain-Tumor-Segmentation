@@ -16,7 +16,7 @@ A comprehensive platform for annotating brain tumors and accessing brain tumor-r
 ---
 
 ## Demo Video
-
+Click on the thumbnail to view the demo video
 [![Demo Video](https://img.youtube.com/vi/VesQPTt6VvQ/0.jpg)](https://youtu.be/VesQPTt6VvQ)
 
 
