@@ -15,6 +15,12 @@ A comprehensive platform for annotating brain tumors and accessing brain tumor-r
 
 ---
 
+## Demo Video
+[Watch the demo video](https://drive.google.com/file/d/1j8MWrY_Z0JR6oOyXOReNX7LOoPhJWoCG/view?usp=sharing)
+
+
+---
+
 ## 🚀 How to Use the App?
 
 Follow these steps to set up and run the application on your local system.
