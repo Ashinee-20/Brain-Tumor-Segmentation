@@ -30,8 +30,8 @@ Follow these steps to set up and run the application on your local system.
 
 ### Clone the Repository
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone [<repository-url>](https://github.com/Ashinee-20/Brain-Tumor-Segmentation.git)
+cd Brain-Tumor-Segmentation
 ```
 ---
 
